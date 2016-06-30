@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//camera/Video.py=utf-8
+encoding//camera/VideoStream.py=utf-8
+encoding//configure/config.py=utf-8
+encoding//facerec/capturePositive.py=utf-8
+encoding//facerec/face.py=utf-8
+encoding//facerec/train.py=utf-8
+encoding//ui/window.py=utf-8
+encoding/main.py=utf-8

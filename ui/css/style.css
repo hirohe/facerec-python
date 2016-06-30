@@ -1,0 +1,24 @@
+QScrollBar:vertical {
+	width: 25px;
+}
+
+QScrollBar:horizontal {
+	height: 25px;
+}
+
+QPushButton {
+	background: #dfdfdf;
+}
+
+/*QMainWindow {
+  background: #b7b7b7;
+}*/
+
+QWidget#facerec {
+  background: #ffffff;
+}
+
+QDialog {
+  min-width: 100px;
+  min-height: 50px;
+}
