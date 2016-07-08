@@ -154,11 +154,6 @@ class Ui_MainWindow(QMainWindow):
         self.register.setVideo(self.video)
         self.setCentralWidget(self.register)
 
-        #test
-#        self.pictureSelect = ui.PictureSelect(self, 'hiro')
-#        self.pictureSelect.setModel(self.model)
-#        self.setCentralWidget(self.pictureSelect)
-
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.label_date.setText(_translate("MainWindow", u"    0000年00月00日", None))

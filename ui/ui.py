@@ -27,8 +27,13 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
+#Qt css样式文件
 style = QString(open('./ui/css/style.css').read())
 
+#显示视频的Qt控件
+#setRect当前一帧图像上画出方框，用于标记人脸的位置
+#setRectColor设置方框的颜色
+#setUserLabel在方框旁边添加识别信息，比如识别到的用户名
 class VideoFrame(QtGui.QLabel):
         
     userName = None
@@ -56,6 +61,7 @@ class VideoFrame(QtGui.QLabel):
         if self.userName != None:
             painter.drawText(self.x, self.y+15, self.userName)
 
+#人脸识别界面
 class FaceRec(QWidget):
     
     model = None
@@ -181,6 +187,7 @@ class FaceRec(QWidget):
         self.label_info.setText(_translate("FaceRec", "label_info", None))
         self.pushButton_back.setText(_translate("FaceRec", u"返回", None))
 
+#人脸录入界面
 class FaceRegister(QWidget):
     
     faceRect = None
@@ -330,6 +337,7 @@ class FaceRegister(QWidget):
         self.pushButton_capture.setText(_translate("FaceRegister", u"开始", None))
         self.pushButton_back.setText(_translate("FaceRegister", u"返回", None))
 
+#软键盘控件
 class InputDialog(TouchInputWidget):
     def __init__(self, callback):
         TouchInputWidget.__init__(self)
@@ -366,8 +374,7 @@ class InputDialog(TouchInputWidget):
         self.callback(self.userName)
         self.hide()
 
-
-
+#图片选择界面
 class PictureSelect(QWidget):
     
     pictures = []
@@ -379,9 +386,7 @@ class PictureSelect(QWidget):
         super(PictureSelect, self).__init__()
         self.mainWindow = mainWindow
         self.path = path
-        
-        
-        
+
         self.setupUi(self)
         
         self.readPictures()
@@ -526,6 +531,7 @@ class TrainThread(QtCore.QThread):
         self.model.load(self.trainFileName)
         print 'model reload over'
 
+#显示单个图像的Qt控件
 class PictureLabel(QtGui.QLabel):
         
     selected = False
