@@ -3,6 +3,8 @@ import cv2
 import numpy as np
 from PyQt4 import QtGui
 
+#封装cv2.VideoCapture函数，用于读取摄像头每帧图像的数据
+#可将每帧图像数据转化为QImage及CVImage
 class Video():
     def __init__(self, device):
         self.capture = cv2.VideoCapture(device)
@@ -55,21 +57,6 @@ class Video():
             return img
         except:
             return None
-        
-#     def convertFrameToQImage(self, frame):
-#         """
-#         converts frame to format suitable for QtGui
-#         """
-#         try:
-#             height,width = frame.shape[:2]
-#             img = QtGui.QImage(self.currentFrame,
-#                               width,
-#                               height,
-#                               QtGui.QImage.Format_RGB888)
-#             #img = QtGui.QPixmap.fromImage(img)
-#             return img
-#         except:
-#             return None
 
     def getFrame(self):
         readFrame = self.read()
