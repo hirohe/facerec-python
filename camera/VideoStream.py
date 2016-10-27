@@ -4,7 +4,6 @@ import socket
 import numpy as np
 import cv2
 from _socket import timeout
-from _sqlite3 import connect
 
 class VideoStream(threading.Thread):
     '''
