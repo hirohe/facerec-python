@@ -1,3 +1,4 @@
+import os
 #coding=utf-8
 # Threshold for the confidence of a recognized face before it's considered a
 # positive match.  Confidence values below this threshold will be considered
@@ -28,6 +29,10 @@ POSITIVE_FILE_PREFIX = 'positive_'
 FACE_WIDTH  = 92
 FACE_HEIGHT = 112
 
+# base dir
+BASE_DIR = os.path.abspath('./')
+print BASE_DIR
+
 # Face detection cascade classifier configuration.
 # You don't need to modify this unless you know what you're doing.
 # See: http://docs.opencv.org/modules/objdetect/doc/cascade_classification.html
@@ -43,16 +48,16 @@ DEBUG_IMAGE = 'capture.pgm'
 FLASH_LIGHT_PIN = 40
 
 #Classifier file
-CLASSIFIER_FILE = '/home/pi/facerec/facerec/haarcascade_frontalface_alt.xml'
+CLASSIFIER_FILE = BASE_DIR + '/facerec/haarcascade_frontalface_alt.xml'
 
 # Faces dir
-FACES_DIR = '/home/pi/facerec/facerec/faces'
+FACES_DIR = BASE_DIR + '/facerec/faces'
 
 #Training dir
-TRAINING_DIR = '/home/pi/facerec/facerec/training'
+TRAINING_DIR = BASE_DIR + '/facerec/training'
 
 # File to save and load face recognizer model.
-TRAINING_FILE = 'training.xml'
+TRAINING_FILE = TRAINING_DIR + '/training.xml'
 
 #user csv file
-USERS_CVS_FILE = '/home/pi/facerec/facerec/training/users.csv'
+USERS_CVS_FILE = BASE_DIR + '/facerec/training/users.csv'
