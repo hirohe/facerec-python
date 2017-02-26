@@ -131,7 +131,7 @@ class FaceRec(QWidget):
         self.video = video
         
         self.vs = VideoStream.VideoStream(self.video,'192.168.1.113', 8888)
-        self.vs.startStream()
+        #self.vs.startStream()
         
         self.startRec()
         

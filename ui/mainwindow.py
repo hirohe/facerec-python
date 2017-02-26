@@ -157,7 +157,7 @@ class Ui_MainWindow(QMainWindow):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.label_date.setText(_translate("MainWindow", u"    0000年00月00日", None))
-        self.label_welcome.setText(unicode(u"人脸识别系统\n何裕华\n12电子本科1班"))
+        self.label_welcome.setText(unicode(u"人脸识别系统"))
         self.btn_face.setText(u"人脸识别")
         self.btn_register.setText(u"人脸录入")
 
