@@ -141,3 +141,5 @@ class UserManager(object):
             self.jsonOut = open(self.__CSVFile, 'wb')
 
         elif type(data) is dict:
+            #TODO
+            pass
