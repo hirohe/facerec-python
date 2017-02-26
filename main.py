@@ -4,13 +4,14 @@ import cv2
 
 from ui import mainwindow
 from camera import Video
+from configure import config
 
 from PyQt4.QtGui import QApplication
 
 def main():
     
     model = cv2.createLBPHFaceRecognizer()
-    model.load('facerec/training/training.xml')
+    model.load(config.TRAINING_FILE)
     
     video = Video.Video(0)
     video.setFrameSize(1280, 720)
