@@ -1,21 +1,17 @@
 # facerec-python
-##个人毕业设计 - 基于树莓派、OpenCV及Python语言的人脸识别
 
-###简介
+## 个人毕业设计 - 基于树莓派、OpenCV及Python语言的人脸识别
+
+### 简介
   使用OpenCV for Python图像识别库，运行在树莓派RASPBIAN JESSIE Linux系统平台上，搭配树莓派官方摄像头模块。
-####camera模块
-####facerec模块
-####fingerec模块
-####ui模块
-####configure模块
   
-###运行要求
+### 运行要求
   1. OpenCV 2.4.9 for Python
   2. Python 2.7
   3. v4l2
   4. PyQt4
   
-###安装要求
+### 安装要求
 
   ```bash
   sudo apt-get install build-essential cmake pkg-config python-dev libgtk2.0-dev libgtk2.0 zlib1g-dev libpng-dev libjpeg-dev libtiff-dev libjasper-dev libavcodec-dev swig unzip
@@ -49,7 +45,7 @@
   # 要使OpenCV开启对v4l2的支持 cmake之后要有以下输出
   # V4L/V4L2:                    Using libv4l (ver 1.13.0)
   
-  make
+  sudo make
   sudo make install
   ```
   
@@ -63,7 +59,7 @@
   python main.py
   ```
   
-###注意
+### 注意
   
   该示例运行的屏幕分辨率为竖屏480 x 800，可以修改 /boot/config.txt 的以下配置
   
